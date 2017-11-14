@@ -15,7 +15,7 @@
         var remSt = document.createElement('style');
         remSt.innerHTML = "html{font-size:" + (measureWidth / (designWidth / rem2px) / defaultFontSize * 100) + "%;}";
         if (!navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i) && docWidth > 1024) {
-            remSt.innerHTML = "html{font-size:625%;margin-right:auto!important;margin-left:auto!important;max-width:750px;}";
+            remSt.innerHTML = "html{font-size:625%!important;margin-right:auto!important;margin-left:auto!important;max-width:750px;}";
         }
         head.appendChild(remSt);
     function resetRemSt() {
