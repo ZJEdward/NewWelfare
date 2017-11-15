@@ -11,12 +11,12 @@
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 	<title>邀请好友-新手福利</title>
-    <script src="js/common/jquery.min.1.10.2.js"></script>
-    <script src="js/common/rem.js"></script>
     <link rel="stylesheet" href="css/common.css">
-
-    <script src="js/success.js"></script>
     <link rel="stylesheet" href="css/index.css">
+    <script src="js/common/jquery.min.1.10.2.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/common/rem.js"></script>
+    <script src="js/index.js"></script>
 </head>
 <body>
 <div class="warpper">
@@ -29,8 +29,54 @@
             	<img src="images/wxtx.png">
             </div>
             <div class="wx-right">
-            	<p>微拍贷</p>
+            	<p class="wx-title-p">微拍贷</p>
+            	<p class="wx-desc-p">邀请您来投资，银行存管灵活存取，立即注册送188元新手礼包、0.1%加息红包和100微币！</p>
             </div>
+        </div>
+        <div class="lb-items">
+        	<ul>
+        		<li class="xshb">
+        			<div class="items-pic">
+                        <img src="images/hbbg1.png">
+                        <p class="items-hb-p">新手福利</p>
+                        <p class="items-hb-title">188<sub>元</sub></p> 
+                        <p class="items-hb-desc">新手礼包</p>
+                        <p class="items-time">2017年10月1日至2017年12月31日</p>  
+                    </div>
+                    <div class="items-text">新手注册后<br/><em>60</em>天内有效</div>
+        		</li>
+                <li class="jxhb">
+                    <div class="items-pic">
+                        <img src="images/hbbg2.png">
+                        <p class="items-hb-p">投资专享</p>
+                        <p class="items-hb-title"><em>+</em>0.1<sub>%</sub></p> 
+                        <p class="items-hb-desc">加息红包</p>
+                        <p class="items-time">2017年10月1日至2017年12月31日</p> 
+                    </div>
+                    <div class="items-text">新手注册后<br/><em>60</em>天内有效</div>
+                </li>
+                <li class="wb">
+                    <div class="items-pic">
+                        <img src="images/hbbg3.png">
+                        <p class="items-hb-p">兑好礼</p>
+                        <p class="items-hb-title"><em>+</em>100</p> 
+                        <p class="items-hb-desc">微币</p>
+                        <p class="items-time">2017年10月1日至2017年12月31日</p> 
+                    </div>
+                    <div class="items-text">新手注册后<br/><em>60</em>天内有效</div>
+                </li>
+        	</ul>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="fixed-box">
+        	<div class="fixed-auto">
+        		<div class="fixed-input">
+	        		<label></label>
+	            	<input type="tel" name="phone" class="phone-input" placeholder="点此输入手机号" maxlength="11">
+	        	</div>
+	        	<button class="fixed-button" id="flBtn">领取福利</button>
+        	</div>      	
         </div>
     </div>
 </div>
