@@ -1,5 +1,5 @@
 /**
- *»ù´¡ÑùÊ½ 
+ *ï¿½ï¿½ï¿½ï¿½Ê½ 
  */
 @charset "UTF-8";
 html {
@@ -67,9 +67,12 @@ a.btn:hover {
 .clearfix {
 	zoom: 1;
 }
-.warpper {
+html,body{
 	width: 100%;
 	height: 100%;
+}
+.warpper {
+	width: 100%;
 	min-width: 320px;
 	max-width: 750px;
 	background: #f0f0f0;
