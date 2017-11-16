@@ -7,8 +7,31 @@
              * 
              */
             init:function(){
-                window.onload = function(){
-                    
+                var url = location.href;
+                $.ajax({
+                    type: "get",
+                    url: "http://192.168.1.170/NewWelfare/token/jssdk.php?url=" + url,
+                    dataType: "jsonp",
+                    success: function(data) {
+                        // console.log(data);
+                        window._APPID = data.appId;
+                        wx.config({
+                            appId: data.appId,
+                            timestamp: data.timestamp,
+                            nonceStr: data.nonceStr,
+                            signature: data.signature,
+                            jsApiList: [
+                                "onMenuShareTimeline",
+                                "onMenuShareAppMessage"
+                            ]
+                        });                        
+                        window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid="+_APPID+"&redirect_uri=http://h5.yunplus.com.cn/test/NewWelfare/oauth.html&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect";
+                    },
+                    error: function(data) {
+                        alert("连接失败！");
+                    }
+                });
+                window.onload = function(){                
                    App.bindEvent(); 
                 }         
             },

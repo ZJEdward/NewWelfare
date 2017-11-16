@@ -27,15 +27,16 @@
         <div class="regform">
             <div class="form-group">
                 <label class="phone-label"></label>
-                <input type="tel" name="rephone" class="reg-phone" placeholder="请输入手机号">
+                <input type="tel" name="rephone" class="reg-phone" placeholder="请输入手机号" maxlength="11">
             </div>
             <div class="form-group">
                 <label class="code-label"></label>
-                <input type="tel" name="phone" class="reg-code" placeholder="请输入手机验证码">
+                <input type="tel" name="phone" class="reg-code" placeholder="请输入手机验证码" maxlength="6">
+                <button type="button" class="code-button">获取验证码</button>
             </div>
             <div class="form-group">
                 <label class="psw-label"></label>
-                <input type="text" name="psword" class="reg-psw" placeholder="请设置密码(6-20位大小写字母和数字组成)">
+                <input type="text" name="psword" class="reg-psw" placeholder="请设置密码(6-20位大小写字母和数字组成)" maxlength="40">
             </div>
         </div>
         <div class="form-check">
