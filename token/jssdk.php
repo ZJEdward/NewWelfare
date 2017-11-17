@@ -1,6 +1,10 @@
 <?php
     error_reporting(E_ALL ^ E_NOTICE);
     $url = $_GET['url'];
+    // $oaappid = "wxffad028955901e6f";
+    // $oasecret = "2b74da20cd8960cc8c513b6e57814af7";
+    $oaappid = "wxbdedc02145b298ec";
+    $oasecret = "02baaab1b0f76983d6d0f59a1d712f70";
     class JSSDK {
         private $appId;
         private $appSecret;
@@ -108,7 +112,7 @@
         }
     }
 
-    $jssdk = new JSSDK("wxffad028955901e6f", "2b74da20cd8960cc8c513b6e57814af7",$url);
+    $jssdk = new JSSDK($oaappid, $oasecret,$url);
     $signPackage = $jssdk->GetSignPackage();
     $tmp = json_encode(array ('appId'=>$signPackage["appId"],'timestamp'=>$signPackage["timestamp"],'nonceStr'=>$signPackage["nonceStr"],'signature'=>$signPackage["signature"],'url'=>$signPackage["url"]));
     $callback = $_GET['callback'];

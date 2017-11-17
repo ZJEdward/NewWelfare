@@ -24,8 +24,9 @@
                                 "onMenuShareTimeline",
                                 "onMenuShareAppMessage"
                             ]
-                        });                        
-                        window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid="+_APPID+"&redirect_uri=http://h5.yunplus.com.cn/test/NewWelfare/oauth.html&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect";
+                        });
+                        
+                        window.location.href="https://open.weixin.qq.com/connect/oauth2/authorize?appid="+_APPID+"&redirect_uri=http://m.weipaidai.com/h5/oauth.html&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect";                   
                     },
                     error: function(data) {
                         alert("连接失败！");
