@@ -3,13 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>oa回调</title>
-    <script src=""></script>
+    <script src="../js/common/jquery.min.1.10.2.js"></script>
 </head>
 <body>
-    信息更新中，请等待...
-    <script>
-    
-        location.href="index.html";
-    </script>
+信息更新中，请等待...
+<script>
+ 	var getUrlparam = function(name) {
+	    var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+	    var r = window.location.search.substr(1).match(reg);
+	    if (r != null) {
+	        return decodeURIComponent(r[2]);
+	    }
+	    return null;
+	};	
+	var code = getUrlparam('code');
+	var state = getUrlparam('state');
+	var imgurl = getUrlparam('imgurl')
+	var shareUrl = getUrlparam('shareUrl')+'&imgurl='+imgurl||'index.html';
+	$.ajax({
+		url:'/oAuthServlet',
+          type: "get",
+          dataType: "json",
+          data:{
+              code:code,
+              state:state
+          },
+          success: function(data) {
+        	  //alert("code:"+code+"---state:"+state+"----用户信息:"+JSON.stringify(data));
+       	      window.localStorage.setItem("userinfo",JSON.stringify(data));
+              location.href= shareUrl;
+          },
+          error:function(data){
+          	App.toast("系统连接超时");
+          }
+	});
+</script>
 </body>
 </html>

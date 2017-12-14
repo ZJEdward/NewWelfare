@@ -12,6 +12,10 @@
   width: 1.44rem;
   height: 1.45rem;
   float: left;
+  overflow: hidden;
+  background:#fff;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
 }
 .wx-right {
   width: 5.26rem;

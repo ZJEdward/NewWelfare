@@ -1,19 +1,29 @@
 ;
 (function (win) {
+    //获取URL参数
+    var getUrlparam = function(name) {
+        var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+        var r = window.atob(window.location.search.substr(1)).match(reg);
+        if (r != null) {
+            return decodeURI(r[2]);
+        }
+        return null;
+    }
     var App = function(){
+        var phone = getUrlparam("phone");
         return {
             /**
              * 初始化入口
              * 
              */
             init:function(){
-                window.onload = function(){
-                    
-                   App.bindEvent(); 
-                }         
+                if(phone){
+                    $('.reg-phone').val(phone);
+                }            
+                App.bindEvent();        
             },
             checkPhone:function(phone){
-                var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;                    
+                var reg = /^((\+86)|(86)|0)?(1[3|4|5|7|8|9])\d{9}$/;                     
                 return reg.test(phone); 
             },
             /**
@@ -54,5 +64,7 @@
             }
         }
     }();
-    window.addEventListener('DOMContentLoaded', App.init(), false);
+    window.onload = function(){
+        App.init();
+    };
 })(window)
