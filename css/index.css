@@ -10,8 +10,12 @@
 }
 .wx-left {
   width: 1.44rem;
-  height: 1.45rem;
+  height: 1.40rem;
   float: left;
+  overflow: hidden;
+  background:#fff;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
 }
 .wx-right {
   width: 5.26rem;
@@ -28,6 +32,7 @@
 }
 .wx-desc-p {
   font-size: 0.24rem;
+  line-height: 0.3rem;
   color: #4c4c4c;
 }
 .lb-items {
@@ -55,6 +60,7 @@
 .items-text {
   float: left;
   width: 1.34rem;
+  line-height: 0.3rem;
   padding: 0 0.2rem;
   margin-top: 0.7rem;
   font-size: 0.24rem;
@@ -95,6 +101,7 @@
 .items-hb-title {
   width: 2rem;
   height: 1.1rem;
+  line-height: 1.1rem;
   position: absolute;
   top: 0rem;
   left: 1.85rem;

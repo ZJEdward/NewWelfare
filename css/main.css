@@ -1,3 +1,6 @@
+.warpper{
+    height: 100%;
+}
 .regform {
   margin: 0.4rem 0.48rem 0 0.48rem;
 }
@@ -103,8 +106,8 @@
   color: #fff;
   outline: none;
   cursor: pointer;
-}
-.reg-button.btn-disable {
   border-radius: 0.1rem;
+}
+.code-button.btn-disable,.reg-button.btn-disable {
   background: #a1a1a1;
 }
